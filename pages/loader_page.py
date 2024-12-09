@@ -1,14 +1,7 @@
-import time
-
 import allure
-from requests import options
-from selenium.webdriver.support.ui import Select
 
-from locators.accordion_page_locators import AccordianPageLocators
 from locators.loader_page_locators import LoaderPageLocators
-from locators.selection_page_locators import DropdownPageLocators, CheckboxPageLocators, RadioButtonsPageLocators
 from pages.base_page import BasePage
-from tests.conftest import driver
 
 
 class LoaderPage(BasePage):

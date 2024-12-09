@@ -1,8 +1,4 @@
-import time
-
 import allure
-
-import pages.login_page
 from pages.loader_page import LoaderPage
 
 @allure.suite('Loader')

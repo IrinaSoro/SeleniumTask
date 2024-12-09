@@ -1,5 +1,4 @@
 import allure
-
 from pages.buttons_click_page import ButtonsClickPage
 
 @allure.suite('Click buttons')

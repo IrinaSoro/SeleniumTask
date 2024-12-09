@@ -1,6 +1,4 @@
 import allure
-
-from pages.contact_us_page import ContactUsPage
 from pages.datepicker_page import DatepickerPage
 
 @allure.suite('Date picker')

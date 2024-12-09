@@ -1,5 +1,4 @@
 import allure
-
 from pages.selection_page import DropdownPage, CheckboxPage, RadioButtonsPage
 
 @allure.suite('Dropdown')

@@ -1,17 +1,9 @@
 import random
 import time
-from pydoc import locate
-from random import choice
 
 import allure
-from requests import delete
 from selenium.webdriver import Keys
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.relative_locator import locate_with
-
-from locators.alerts_page_locators import AlertsPageLocators
 from locators.todo_list_page_locators import TodoListPageLocators
-from locators.upload_file_locator import UploadFilePageLocators
 from pages.base_page import BasePage
 
 

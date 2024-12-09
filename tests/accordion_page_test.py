@@ -1,5 +1,4 @@
 import allure
-
 from pages.accordion_page import AccordianPage
 
 @allure.suite('Accordian')

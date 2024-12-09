@@ -1,5 +1,4 @@
 import allure
-
 from pages.todo_list_page import TodoListPage
 
 @allure.suite('Todo list')

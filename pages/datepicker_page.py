@@ -1,9 +1,7 @@
 import time
 from datetime import datetime
-
 import allure
 
-from locators.contact_us_page_locators import ContactUsPageLocators
 from locators.datepicker_page_locators import DatepickerPageLocators
 from pages.base_page import BasePage
 

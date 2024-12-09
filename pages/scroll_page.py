@@ -1,11 +1,8 @@
 import time
-
 import allure
 
-from locators.buttons_click_page_locators import ButtonsClickPageLocators
 from locators.scroll_page_locators import ScrollPageLocators
 from pages.base_page import BasePage
-
 
 
 class ScrollPage(BasePage):

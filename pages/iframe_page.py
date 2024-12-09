@@ -1,12 +1,7 @@
-import time
-
 import allure
-from selenium.common import UnexpectedAlertPresentException
 
-from locators.alerts_page_locators import AlertsPageLocators
 from locators.iframe_page_locators import IframePageLocators
 from pages.base_page import BasePage
-
 
 
 class IframePage(BasePage):

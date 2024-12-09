@@ -1,6 +1,4 @@
 import allure
-
-from pages.accordion_page import AccordianPage
 from pages.actions_page import ActionsPage
 
 @allure.suite('Check actions')

@@ -1,10 +1,7 @@
 import time
-
 import allure
-
 from locators.alerts_page_locators import AlertsPageLocators
 from pages.base_page import BasePage
-
 
 
 class AlertsPage(BasePage):

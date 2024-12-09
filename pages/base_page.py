@@ -113,7 +113,6 @@ class BasePage:
 
     @allure.step('Move to element by offset')
     def action_move_to_element_by_offset(self, element, x, y):
-        # wait(self.driver, 10).until(EC.visibility_of_element_located(element))
         action = ActionChains(self.driver)
         action.move_to_element_with_offset(element, x, y)
         action.click()
@@ -121,7 +120,6 @@ class BasePage:
 
     @allure.step('Move to element and click')
     def action_move_to_element_and_click(self, element):
-        # wait(self.driver, 10).until(EC.visibility_of_element_located(element))
         action = ActionChains(self.driver)
         action.move_to_element(element)
         action.click()
@@ -129,7 +127,6 @@ class BasePage:
 
     @allure.step('Click and hold element')
     def click_and_hold_element(self, element):
-        # wait(self.driver, 10).until(EC.visibility_of_element_located(element))
         action = ActionChains(self.driver)
         action.click_and_hold(element)
         action.perform()

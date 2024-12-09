@@ -1,5 +1,4 @@
 import allure
-
 from pages.upload_file_page import UploadFilePage
 
 @allure.suite('File upload')

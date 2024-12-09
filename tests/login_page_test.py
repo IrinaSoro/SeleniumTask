@@ -1,6 +1,5 @@
 import time
 import allure
-
 import pages.login_page
 
 @allure.suite('Login')

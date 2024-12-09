@@ -1,5 +1,4 @@
 import time
-
 import allure
 
 from locators.login_page_locators import LoginPageLocators

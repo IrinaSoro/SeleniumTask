@@ -1,11 +1,7 @@
 import os
 import time
-
 import allure
-from selenium.common import UnexpectedAlertPresentException
-
 from generator.generator import generated_file
-from locators.alerts_page_locators import AlertsPageLocators
 from locators.upload_file_locator import UploadFilePageLocators
 from pages.base_page import BasePage
 

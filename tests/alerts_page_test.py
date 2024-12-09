@@ -1,5 +1,4 @@
 import allure
-
 from pages.alerts_page import AlertsPage
 
 @allure.suite('Check alerts')

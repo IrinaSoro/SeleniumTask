@@ -1,5 +1,4 @@
 import allure
-
 from pages.contact_us_page import ContactUsPage
 
 @allure.suite('Contact Us')

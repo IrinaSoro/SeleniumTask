@@ -1,6 +1,4 @@
 import allure
-
-from pages.alerts_page import AlertsPage
 from pages.iframe_page import IframePage
 
 @allure.suite('Iframe')

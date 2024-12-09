@@ -1,12 +1,9 @@
 import time
-from itertools import permutations
-
 import allure
 
 from generator.generator import generated_person
 from locators.contact_us_page_locators import ContactUsPageLocators
 from pages.base_page import BasePage
-
 
 
 class ContactUsPage(BasePage):

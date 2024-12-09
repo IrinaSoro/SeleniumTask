@@ -1,11 +1,7 @@
 import time
-
 import allure
-from selenium.common import UnexpectedAlertPresentException, NoAlertPresentException
-
 from locators.actions_page_locators import ActionsPageLocators
 from pages.base_page import BasePage
-
 
 
 class ActionsPage(BasePage):
