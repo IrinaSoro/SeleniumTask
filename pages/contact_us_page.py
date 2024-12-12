@@ -24,8 +24,9 @@ class ContactUsPage(BasePage):
       self.element_is_visible(self.locators.LAST_NAME).send_keys(person_data.lastname)
       self.element_is_visible(self.locators.SUBMIT_BUTTON).click()
       time.sleep(2)
-      error_text1 = self.element_is_visible(self.locators.ERROR_MESSAGE).text
-      return error_text1.split(": ")
+      required_fields_error_message = self.element_is_visible(self.locators.ERROR_MESSAGE).text
+      for text in required_fields_error_message.splitlines():
+          return text.split(": ")
 
   @allure.step('Fill in form with invalid email')
   def verify_incorrect_email_address_error(self):

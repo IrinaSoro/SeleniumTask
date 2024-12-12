@@ -10,7 +10,7 @@ class TestContactUsPage:
         contact_us_page.open()
         first_name_placeholder, last_name_placeholder, email_placeholder, comments_placeholder = contact_us_page.verify_placeholders()
         required_fields_message = contact_us_page.verify_required_fields()
-        assert 'all fields are required' in required_fields_message[1]
+        assert 'all fields are required' == required_fields_message[1]
         assert first_name_placeholder == 'First Name', 'First name placeholder is not added'
         assert last_name_placeholder == 'Last Name', 'Last name placeholder is not added'
         assert email_placeholder == 'Email Address', 'Email address placeholder is not added'
