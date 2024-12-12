@@ -1,6 +1,6 @@
 import random
 from faker import Faker
-from data.data import Person
+from data.data import PersonData
 fake_en = Faker('En')
 
 
@@ -9,10 +9,10 @@ def generated_file():
     file = open(path, 'w+')
     file.write(f'Hello World{random.randint(0, 999)}')
     file.close()
-    return file.name, path
+    return path
 
-def generated_person():
-    yield Person(
+def generated_person_data():
+    yield PersonData(
         firstname=fake_en.first_name(),
         lastname=fake_en.last_name(),
         comment=fake_en.text(),

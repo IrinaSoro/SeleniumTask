@@ -4,7 +4,7 @@ from pages.selection_page import DropdownPage, CheckboxPage, RadioButtonsPage
 @allure.suite('Dropdown')
 class TestDropdownPage:
 
-    @allure.title('Select options from dropdown')
+    @allure.title('4 - Select options from dropdown')
     def test_dropdown(self, driver):
         dropdown_page = DropdownPage(driver, "https://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html")
         dropdown_page.open()
@@ -13,7 +13,7 @@ class TestDropdownPage:
 @allure.suite('Checkbox')
 class TestCheckboxPage:
 
-    @allure.title('Select checkbox option')
+    @allure.title('4 - Select checkbox option')
     def test_checkbox_options(self, driver):
         checkbox_page = CheckboxPage(driver,"https://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html")
         checkbox_page.open()
@@ -22,7 +22,7 @@ class TestCheckboxPage:
 @allure.suite('Radio buttons')
 class TestRadioButtonsPage:
 
-    @allure.title('Verify radio button options state')
+    @allure.title('4 - Verify radio button options state')
     def test_radio_buttons_options(self, driver):
         radio_button_page = RadioButtonsPage(driver,"https://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html")
         radio_button_page.open()
@@ -30,7 +30,7 @@ class TestRadioButtonsPage:
         assert not orange_button.is_enabled(), '"Orange" option is enabled'
         assert not gabbage_button.is_enabled(), '"Gabbage" option is enabled'
 
-    @allure.title('Select an option')
+    @allure.title('4 - Select an option')
     def test_fruit_selection(self, driver):
         radio_button_page = RadioButtonsPage(driver, "https://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html")
         radio_button_page.open()

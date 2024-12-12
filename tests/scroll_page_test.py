@@ -4,7 +4,7 @@ from pages.scroll_page import ScrollPage
 @allure.suite('Scrolling')
 class TestScrollPage:
 
-    @allure.title('Verify scrolling to elements')
+    @allure.title('13 - Verify scrolling to elements')
     def test_scroll_to_elements(self, driver):
         scroll_page = ScrollPage(driver, "https://webdriveruniversity.com/Scrolling/index.html")
         scroll_page.open()

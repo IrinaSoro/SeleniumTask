@@ -4,7 +4,7 @@ from pages.accordion_page import AccordianPage
 @allure.suite('Accordian')
 class TestAccordianPage:
 
-    @allure.title('Check accordian items')
+    @allure.title('3 - Check accordian items')
     def test_accordian(self, driver):
         accordian_page = AccordianPage(driver, "https://webdriveruniversity.com/Accordion/index.html")
         accordian_page.open()

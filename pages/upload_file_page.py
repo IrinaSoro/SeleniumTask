@@ -12,7 +12,7 @@ class UploadFilePage(BasePage):
 
   @allure.step('Generate a file to upload')
   def upload_file(self):
-      file_name, path = generated_file()
+      path = generated_file()
       with allure.step('Upload the generated file'):
           self.element_is_visible(self.locators.INPUT_FILE_FIELD).send_keys(path)
           os.remove(path)

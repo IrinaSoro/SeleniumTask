@@ -61,7 +61,7 @@ class BasePage:
         self.driver.execute_script("arguments[0].click();", element)
 
     @allure.step('Get an element date value')
-    def get_elem_value(self, element):
+    def get_element_value(self, element):
         return self.driver.execute_script('return arguments[0].getAttribute("value")', element)
 
     @allure.step('Wait text to appear')

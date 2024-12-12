@@ -4,7 +4,7 @@ from pages.buttons_click_page import ButtonsClickPage
 @allure.suite('Click buttons')
 class TestButtonsClickPage:
 
-    @allure.title('Check js and webdriver click')
+    @allure.title('12 - Check js and webdriver click')
     def test_click_elements(self, driver):
         buttons_click_page = ButtonsClickPage(driver, "https://webdriveruniversity.com/Click-Buttons/index.html")
         buttons_click_page.open()

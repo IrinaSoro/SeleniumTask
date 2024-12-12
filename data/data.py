@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 
 @dataclass
-class Person:
+class PersonData:
     firstname: str = None
     lastname: str = None
     comment: str = None

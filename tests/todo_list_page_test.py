@@ -4,7 +4,7 @@ from pages.todo_list_page import TodoListPage
 @allure.suite('Todo list')
 class TestTodoListPage:
 
-    @allure.title('Check todo list updated')
+    @allure.title('10 - Check todo list updated')
     def test_todo_list_update(self, driver):
         todo_list_page = TodoListPage(driver, "https://webdriveruniversity.com/To-Do-List/index.html")
         todo_list_page.open()

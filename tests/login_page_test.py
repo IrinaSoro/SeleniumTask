@@ -5,7 +5,7 @@ import pages.login_page
 @allure.suite('Login')
 class TestLoginPage:
 
-    @allure.title('Verify login functionality')
+    @allure.title('1 - Verify login functionality')
     def test_login_and_accept_alert(self, driver):
         login_page = pages.login_page.LoginPage(driver, "https://webdriveruniversity.com/Login-Portal/fail.html")
         login_page.open()
