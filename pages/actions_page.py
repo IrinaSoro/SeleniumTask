@@ -24,9 +24,9 @@ class ActionsPage(BasePage):
       element =  self.element_is_visible(self.locators.HOVER_OVER_SECOND_BUTTON)
       self.action_move_to_element(element)
       self.element_is_visible(self.locators.LINK).click()
-      time.sleep(5)
-      with allure.step('Handle the unexpected alert error'):
-        self.switch_to_alert_window()
+      with allure.step('Get the alert text'):
+        text_alert = self.handle_alert_window()
+      return text_alert
 
   @allure.step('Click and hold')
   def check_click_and_hold(self):

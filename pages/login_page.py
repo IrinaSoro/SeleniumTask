@@ -14,6 +14,5 @@ class LoginPage(BasePage):
       self.element_is_visible(self.locators.EMAIL).send_keys("Admin")
       self.element_is_visible(self.locators.PASSWORD).send_keys("Admin")
       self.element_is_visible(self.locators.SUBMIT).click()
-      time.sleep(5)
-      with allure.step('Switch to alert and handle the possible error'):
-          self.switch_to_alert_window()
+      alert_text = self.handle_alert_window()
+      return alert_text

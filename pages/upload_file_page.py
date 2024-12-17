@@ -17,6 +17,8 @@ class UploadFilePage(BasePage):
           self.element_is_visible(self.locators.INPUT_FILE_FIELD).send_keys(path)
           os.remove(path)
           self.element_is_visible(self.locators.SUBMIT_BUTTON).click()
-          time.sleep(3)
-          is_alert_present = self.switch_to_alert_window()
-      return is_alert_present
+          is_alert_present = self.handle_alert_window()
+          if is_alert_present is not None:
+              return True
+          else:
+              print("Alert is not shown")

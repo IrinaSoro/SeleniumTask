@@ -9,9 +9,15 @@ class AlertsPage(BasePage):
 
   @allure.step('Switch to javascript alert')
   def check_js_alert(self):
+      # self.element_is_visible(self.locators.JAVASCRIPT_ALERT_BUTTON).click()
+      # time.sleep(6)
+      # self.switch_to_alert_window()
       self.element_is_visible(self.locators.JAVASCRIPT_ALERT_BUTTON).click()
-      time.sleep(6)
-      self.switch_to_alert_window()
+      alert_window = self.driver.switch_to.alert
+      with allure.step('Accept the confirmation box'):
+          alert_text = alert_window.text
+          alert_window.accept()
+      return  alert_text
 
   @allure.step('Switch to modal popup')
   def check_modal_popup(self):

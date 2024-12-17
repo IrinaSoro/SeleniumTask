@@ -14,14 +14,7 @@ class BasePage:
     def __init__(self, driver, url):
         self.driver = driver
         self.url = url
-        
-    @allure.step('Open a browser')
-    def open(self):
-        self.driver.get(self.url)
-
-    @allure.step('Find an element')
-    def get_elem(self, locator):
-        return self.driver.find_element(locator)
+        self.driver.get(f"https://webdriveruniversity.com{self.url}")
 
     @allure.step('Find a visible element')    
     def element_is_visible(self, locator, timeout=5):
@@ -60,9 +53,6 @@ class BasePage:
     def js_click_element(self, element):
         self.driver.execute_script("arguments[0].click();", element)
 
-    @allure.step('Get an element date value')
-    def get_element_value(self, element):
-        return self.driver.execute_script('return arguments[0].getAttribute("value")', element)
 
     @allure.step('Wait text to appear')
     def wait_text_to_appear(self, locator, text, timeout=10):
@@ -78,16 +68,12 @@ class BasePage:
         return wait(self.driver, timeout).until(EC.invisibility_of_element_located(locator))
 
     @allure.step('Switch to alert and accept')
-    def switch_to_alert_window(self, timeout=5):
-        wait(self.driver, 10).until(EC.alert_is_present())
-        try:
-            alert_window = self.driver.switch_to.alert
+    def handle_alert_window(self, timeout=5):
+        alert_window = self.driver.switch_to.alert
+        with allure.step('Accept the confirmation box'):
+            alert_text = alert_window.text
             alert_window.accept()
-            return alert_window.text
-        except (UnexpectedAlertPresentException, NoAlertPresentException):
-            time.sleep(5)
-            has_alert = self.driver.execute_script("return (typeof window.alert === 'function');")
-            print("Alert detection using JavaScript: ", has_alert)
+        return alert_text
 
     @allure.step('Double click')
     def action_double_click(self, element):
