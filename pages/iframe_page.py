@@ -8,7 +8,7 @@ class IframePage(BasePage):
   locators = IframePageLocators()
 
   @allure.step('Switch to frame')
-  def check_section_description(self):
+  def get_iframe_section_description(self):
       frame = self.element_is_present(self.locators.FRAME)
       self.driver.switch_to.frame(frame)
       with allure.step('Get the section description'):

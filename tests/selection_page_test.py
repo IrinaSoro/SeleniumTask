@@ -29,7 +29,7 @@ class TestRadioButtonsPage:
     @allure.title('4 - Verify radio button options state')
     def test_radio_buttons_options(self, driver):
         radio_button_page = RadioButtonsPage(driver,self.URL)
-        orange_button, gabbage_button = radio_button_page.check_radio_button_options()
+        orange_button, gabbage_button = radio_button_page.select_radio_button_options()
         assert not orange_button.is_enabled(), '"Orange" option is enabled'
         assert not gabbage_button.is_enabled(), '"Gabbage" option is enabled'
 

@@ -6,12 +6,11 @@ from locators.datepicker_page_locators import DatepickerPageLocators
 from pages.base_page import BasePage
 
 
-
 class DatepickerPage(BasePage):
   locators = DatepickerPageLocators()
 
   @allure.step('Select a new date')
-  def select_date(self):
+  def get_selected_date(self):
         date = self.element_is_visible(self.locators.DATE_PICKER)
         default_date = date.get_property("value")
         now = datetime.now()

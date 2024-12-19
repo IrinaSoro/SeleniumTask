@@ -10,8 +10,8 @@ from pages.base_page import BasePage
 class TodoListPage(BasePage):
   locators = TodoListPageLocators()
 
-  @allure.step('Add new item to Todo list')
-  def update_todo_list_items(self):
+  @allure.step('Add a new item to Todo list')
+  def get_updated_todo_list_items(self):
       input_field = self.element_is_visible(self.locators.ADD_NEW_TODO_FIELD)
       count = 2
       while count > 0:

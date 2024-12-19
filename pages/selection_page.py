@@ -14,7 +14,6 @@ class DropdownPage(BasePage):
       self.update_page_element_by_value(self.locators.DROPDOWN_MENU_THREE, 'css')
 
 
-
 class CheckboxPage(BasePage):
   locators = CheckboxPageLocators()
 
@@ -28,7 +27,7 @@ class RadioButtonsPage(BasePage):
   locators = RadioButtonsPageLocators()
 
   @allure.step('Select radio button options')
-  def check_radio_button_options(self):
+  def select_radio_button_options(self):
         self.element_is_visible(self.locators.YELLOW_VALUE_OPTION).click()
         orange_button = self.element_is_visible(self.locators.ORANGE_VALUE_OPTION)
         gabbage_button =self.element_is_visible(self.locators.GABBAGE_VALUE_OPTION)

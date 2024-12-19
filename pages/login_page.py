@@ -10,7 +10,7 @@ class LoginPage(BasePage):
   locators = LoginPageLocators()
 
   @allure.step('Submit login form')
-  def fill_login_form(self):
+  def get_login_validation_alert_text(self):
       self.element_is_visible(self.locators.EMAIL).send_keys("Admin")
       self.element_is_visible(self.locators.PASSWORD).send_keys("Admin")
       self.element_is_visible(self.locators.SUBMIT).click()

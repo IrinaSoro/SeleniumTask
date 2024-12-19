@@ -7,7 +7,7 @@ class AccordianPage(BasePage):
   locators = AccordianPageLocators()
 
   @allure.step('Select accordion and get the text shown')
-  def check_accordian(self):
+  def get_accordian_text(self):
     self.wait_text_to_appear(self.locators.LOADING_COMPLETE_LABEL, 'LOADING COMPLETE.')
     label_text = self.element_is_present(self.locators.LOADING_COMPLETE_LABEL).text
     self.element_is_visible(self.locators.KEEP_CLICKING_BUTTON).click()

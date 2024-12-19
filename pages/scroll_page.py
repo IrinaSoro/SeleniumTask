@@ -9,11 +9,10 @@ class ScrollPage(BasePage):
   locators = ScrollPageLocators()
 
   @allure.step('Scroll to zone 1')
-  def scroll_to_elements(self):
+  def get_scrolled_elements_text(self):
       self.element_is_visible(self.locators.ZONE_ONE)
       time.sleep(2)
       zone1 = self.element_is_clickable(self.locators.ZONE_ONE)
-      # self.action_move_to_element_and_click(zone1)
       self.scroll_to_element_by_coordinates(750, 150)
       zone1.click()
       time.sleep(2)

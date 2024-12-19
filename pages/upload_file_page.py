@@ -1,10 +1,8 @@
 import os
-import time
 import allure
 from generator.generator import generated_file
 from locators.upload_file_locator import UploadFilePageLocators
 from pages.base_page import BasePage
-
 
 
 class UploadFilePage(BasePage):

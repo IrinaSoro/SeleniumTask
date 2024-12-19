@@ -9,4 +9,4 @@ class TestButtonsClickPage:
     @allure.title('12 - Check js and webdriver click')
     def test_click_elements(self, driver):
         buttons_click_page = ButtonsClickPage(driver, self.URL)
-        buttons_click_page.click_elements()
+        buttons_click_page.click_web_elements()
